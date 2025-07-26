@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar/Navbar.jsx'
 import Products from './Components/Products/Products.jsx'
 import ProductDetails from './Components/ProductDetails/ProductDetails.jsx'
@@ -19,7 +19,7 @@ const App = () => {
   const filteredProducts = products.filter(product =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   )
-console.log("Fetched products in App.jsx:", products)
+
 
   return (
     <Router>
